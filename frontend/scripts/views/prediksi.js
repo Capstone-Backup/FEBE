@@ -55,14 +55,14 @@ export function renderPrediksiView() {
     }
 
     try {
-      const response = await fetch("http://127.0.0.1:5000/predict", {
+      const response = await fetch("https://diawellness-diabetes-api.hf.space/predict", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          gender,
-          age,
-          bmi,
-          hba1c_level: hba1c,
+          gender: gender,
+          age: age,
+          bmi: bmi,
+          HbA1c_level: hba1c,
           blood_glucose_level: glucoseLevel,
           smoking_history: smokingHistory
         })
