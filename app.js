@@ -30,7 +30,7 @@ app.post('/predict', async (req, res) => {
   try {
     console.log('Data dari frontend:', req.body); // Tambahkan baris ini untuk melihat data inputan
     // Kirim data ke ML API
-    const mlResponse = await fetch('http://127.0.0.1:5501/predict', {
+    const mlResponse = await fetch('https://diawellness-diabetes-api.hf.space/predict', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(req.body)
